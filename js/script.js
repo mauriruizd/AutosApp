@@ -11,7 +11,9 @@ $(document).ready(function(){
 	$('.modelo').click(function(){
 		modelo = $(this).html().toLowerCase();
 		$('#show-car').attr('src', 'img/' + modelo + '.png');
-		$('.roda:first').click();
+		//$('.roda:first').click();
+		var dados = getDistance(modelo);
+		renewRodas(dados[3]);
 	});
 	$('.roda').click(function(){
 		var src = $(this).attr('src');
@@ -29,14 +31,19 @@ function creaRoda(src){
 	resizeRodas(distancias[2]);
 }
 
+function renewRodas(aro){
+	$('.roda').hide();
+	$(.'ARO' + aro).show();
+}
+
 function getDistance(modelo){
 	var modelos = {
-		agile : [287, 657, 70],
-		corsa : [275, 627, 70],
-		astra : [274, 672, 77],
-		vectra: [269, 645, 70],
-		palio : [308, 640, 66],
-		uno : [313, 639, 70]
+		agile : [287, 657, 70, 17],
+		corsa : [275, 627, 70, 20],
+		astra : [274, 672, 77, 20],
+		vectra: [269, 645, 70, 20],
+		palio : [308, 640, 66, 20],
+		uno : [313, 639, 70, 22]
 	};
 	if(typeof modelos[modelo] == 'undefined')
 		return modelos['agile'];
