@@ -11,45 +11,54 @@ $(document).ready(function(){
 	$('.modelo').click(function(){
 		modelo = $(this).html().toLowerCase();
 		$('#show-car').attr('src', 'img/' + modelo + '.png');
-		//$('.roda:first').click();
-		var dados = getDistance(modelo);
-		renewRodas(dados[3]);
+		renewRodas(getDistance(modelo, 3));
+		$('.visible:first').click();
 	});
 	$('.roda').click(function(){
 		var src = $(this).attr('src');
 		creaRoda(src);
 	});
-	modelo = 'agile';
-	$('.roda:first').click();
+	modelo = $('.modelo:first').html().toLowerCase();
+	renewRodas(getDistance(modelo)[3]);
+	$('.visible:first').click();
 });
 
 function creaRoda(src){
 	$('.roda-show').attr('src', src);
 	var distancias = getDistance(modelo);
-	$('.roda-show').first().css('left', distancias[0] + 'px');
-	$('.roda-show').last().css('left', distancias[1] + 'px');
+	$('.roda-show:first').css('left', distancias[0] + 'px');
+	$('.roda-show:last').css('left', distancias[1] + 'px');
 	resizeRodas(distancias[2]);
 }
 
 function renewRodas(aro){
-	$('.roda').hide();
-	$(.'ARO' + aro).show();
+	$('.roda').removeClass('visible');
+	$('.ARO' + aro).addClass('visible');
 }
 
-function getDistance(modelo){
+function getDistance(modelo, index){
 	var modelos = {
-		agile : [287, 657, 70, 17],
-		corsa : [275, 627, 70, 20],
-		astra : [274, 672, 77, 20],
-		vectra: [269, 645, 70, 20],
+		//chevrolet
+		onix : [288, 662, 72, 17],
+		corsa : [277, 630, 70, 17],
+		s10 : [263, 637, 71, 17],
+		vectra: [269, 645, 70, 17],
+		cruze : [289, 645, 70, 17],
+		//fiat
+		linea : [273, 638, 70, 17],
+		punto : [303, 661, 68, 17],
 		palio : [308, 640, 66, 20],
 		uno : [313, 639, 70, 22]
 	};
 	if(typeof modelos[modelo] == 'undefined')
 		return modelos['agile'];
+	if(typeof index !== 'undefined')
+		return modelos[modelo][index];
 	return modelos[modelo];
 }
 function resizeRodas(px){
-	$('.roda-show').css('width', px + 'px');
-	$('.roda-show').css('height', px + 'px');
+	$('.roda-show').css({
+		'width' : 'auto',
+		'height' : px + 'px'
+	});
 }

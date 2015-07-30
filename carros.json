@@ -1,0 +1,75 @@
+{
+	"Fiat" : [
+		"Palio",
+		"Strada",
+		"Uno",
+		"Siena",
+		"Punto",
+		"Linea",
+		"Fiorino"
+	],
+	"Chevrolet" : [
+		"Agile",
+		"Onix",
+		"Prisma",
+		"S10",
+		"Classic",
+		"Celta",
+		"Spin",
+		"Montana",
+		"Cobalt",
+		"Cruze"
+	],
+	"Hyundai" : [
+		"HB20",
+		"IX35",
+		"Accent",
+		"Tucson"
+	],
+	"Ford" : [
+		"Ka",
+		"Ecosport",
+		"Ranger",
+		"Focus",
+		"Fusion",
+		"Edge"
+	],
+	"Volkswagen" : [
+		"Gol",
+		"Golf",
+		"Fox",
+		"Saveiro",
+		"Voyage",
+		"Up",
+		"Passat",
+		"Bora",
+		"Amarok"
+	],
+	"Renault" : [
+		"Sandero",
+		"Logan",
+		"Duster",
+		"Clio",
+	],
+	"Toyota" : [
+		"Corolla",
+		"Etios",
+		"Hilux",
+		"Etios Sedan"
+	],
+	"Honda" : [
+		"Fit",
+		"HR-V",
+		"Civic",
+		"City"
+	],
+	"Nissan" : [
+		"March",
+		"Sentra",
+		"Livina",
+		"Versa"
+	],
+	"Peugeot" : [
+		"208"
+	]
+}
