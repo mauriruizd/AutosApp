@@ -9,7 +9,7 @@ $(document).ready(function(){
 		$('.lista-modelos').eq(index).show();
 	});
 	$('.modelo').click(function(){
-		modelo = $(this).html().toLowerCase();
+		modelo = $(this).html().toLowerCase().replace(" ", "_");
 		$('#show-car').attr('src', 'img/' + modelo + '.png');
 		renewRodas(getDistance(modelo, 3));
 		$('.visible:first').click();
@@ -55,6 +55,11 @@ function getDistance(modelo, index){
 		//toyota
 		corolla : [314, 619, 62, 18],
 		hilux : [311, 608, 55, 20],
+		//hyundai
+		santa_fe : [311, 608, 60, 18],
+		ix35 : [311, 608, 60, 18],
+		accent : [307, 623, 56, 17],
+		veloster : [310, 623, 60, 18],
 		//bmw
 		320 : [292, 634, 70, 17],
 		m3 : [292, 638, 70, 19],
