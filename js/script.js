@@ -67,7 +67,26 @@ function getDistance(modelo, index){
 		x1 : [294, 628, 65, 17],
 		x3 : [301, 617, 64, 18],
 		x5 : [296, 618, 61, 20],
-		x6 : [301, 619, 64, 20]
+		x6 : [301, 619, 64, 20],
+		//kia
+		sorento : [310, 620, 67, 18],
+		sportage : [306, 630, 67, 18],
+		cadenza : [308, 610, 60, 18],
+		cerato : [308, 623, 60, 18],
+		//ford
+		edge : [261, 654, 83, 18],
+		ecosport : [303, 625, 56, 17],
+		ranger : [298, 621, 58, 18],
+		fusion : [259, 645, 74, 17],
+		focus : [314, 638, 66, 18],
+		//honda
+		civic : [264, 659, 72, 17],
+		city : [310, 623, 61, 17],
+		'hr-v' : [315, 636, 64, 19],
+		//nissan
+		sentra : [308, 623, 60, 17],
+		livina : [313, 626, 60, 17]
+
 	};
 	if(typeof modelos[modelo] == 'undefined')
 		return modelos['agile'];
