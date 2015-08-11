@@ -47,11 +47,13 @@ function getDistance(modelo, index){
 		//fiat
 		linea : [273, 638, 70, 17],
 		punto : [303, 661, 68, 17],
+		bravo : [317, 646, 60, 17],
 		palio : [308, 640, 66, 17],
 		uno : [313, 639, 70, 17],
 		siena : [266, 629, 70, 17],
 		stilo : [271, 670, 75, 17],
 		strada : [313, 639, 60, 17],
+		freemont : [312, 626, 64, 19],
 		//toyota
 		corolla : [314, 619, 62, 18],
 		hilux : [311, 608, 55, 20],
@@ -68,6 +70,11 @@ function getDistance(modelo, index){
 		x3 : [301, 617, 64, 18],
 		x5 : [296, 618, 61, 20],
 		x6 : [301, 619, 64, 20],
+		//mercedes
+		serie_a : [309, 652, 66, 18],
+		serie_c : [295, 609, 65, 18],
+		serie_e : [288, 602, 65, 18],
+		serie_s : [293, 615, 56, 18],
 		//kia
 		sorento : [310, 620, 67, 18],
 		sportage : [306, 630, 67, 18],
@@ -83,13 +90,22 @@ function getDistance(modelo, index){
 		civic : [264, 659, 72, 17],
 		city : [310, 623, 61, 17],
 		'hr-v' : [315, 636, 64, 19],
+		//audi
+		a1 : [290, 648, 69, 17],
+		a4 : [299, 620, 60, 18],
+		a7 : [299, 617, 60, 18],
+		q3 : [308, 621, 78, 19],
+		q5 : [302, 628, 68, 20],
+		q7 : [301, 620, 61, 20],
 		//nissan
 		sentra : [308, 623, 60, 17],
-		livina : [313, 626, 60, 17]
+		livina : [313, 626, 60, 17],
+		versa : [308, 623, 55, 17],
+		'370z' : [305, 624, 72, 19]
 
 	};
 	if(typeof modelos[modelo] == 'undefined')
-		return modelos['agile'];
+		return modelos['onix'];
 	if(typeof index !== 'undefined')
 		return modelos[modelo][index];
 	return modelos[modelo];
