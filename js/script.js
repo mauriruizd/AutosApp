@@ -41,7 +41,7 @@ function getDistance(modelo, index){
 		//chevrolet
 		onix : [288, 662, 72, 17],
 		corsa : [277, 630, 70, 17],
-		s10 : [263, 637, 71, 17],
+		s10 : [263, 637, 71, 18],
 		vectra: [269, 645, 70, 17],
 		cruze : [289, 645, 70, 17],
 		//fiat
@@ -80,6 +80,10 @@ function getDistance(modelo, index){
 		sportage : [306, 630, 67, 18],
 		cadenza : [308, 610, 60, 18],
 		cerato : [308, 623, 60, 18],
+		//mitsubishi
+		eclipse : [318, 623, 60, 18],
+		lancer : [310, 623, 60, 18],
+		triton : [294, 603, 56, 18],
 		//ford
 		edge : [261, 654, 83, 18],
 		ecosport : [303, 625, 56, 17],
@@ -98,10 +102,24 @@ function getDistance(modelo, index){
 		q5 : [302, 628, 68, 20],
 		q7 : [301, 620, 61, 20],
 		//nissan
-		sentra : [308, 623, 60, 17],
+		sentra : [308, 617, 56, 17],
 		livina : [313, 626, 60, 17],
 		versa : [308, 623, 55, 17],
-		'370z' : [305, 624, 72, 19]
+		'370z' : [305, 624, 72, 19],
+		//renault
+		sandero : [306, 646, 67, 18],
+		logan : [301, 629, 62, 17],
+		duster : [304, 636, 64, 17],
+		clio : [314, 658, 58, 17],
+		//volkswagen
+		gol : [313, 651, 60, 17],
+		golf : [274, 667, 77, 17],
+		passat : [301, 617, 55, 17],
+		bora : [273, 640, 69, 17],
+		fox : [323, 662, 69, 17],
+		saveiro : [299, 628, 54, 17],
+		voyage : [312, 619, 54, 17],
+		amarok : [295, 599, 54, 19]
 
 	};
 	if(typeof modelos[modelo] == 'undefined')
