@@ -10,13 +10,15 @@ $(document).ready(function(){
 	});
 	$('.modelo').click(function(){
 		modelo = $(this).html().toLowerCase().replace(" ", "_");
-		$('#show-car').attr('src', 'img/' + modelo + '.png');
+		$('#show-car').attr('src', 'img/carregando.jpg');
+		setTimeout(function(){$('#show-car').attr('src', 'img/' + modelo + '.png')},500);
 		renewRodas(getDistance(modelo, 3));
 		$('.visible:first').click();
 	});
 	$('.roda').click(function(){
 		var src = $(this).attr('src');
 		creaRoda(src);
+		$('#roda-atual').html('<b>Modelo da Roda:</b>' + getRodaNome($(this).index('.roda')));
 	});
 	modelo = $('.modelo:first').html().toLowerCase();
 	renewRodas(getDistance(modelo)[3]);
@@ -127,6 +129,27 @@ function getDistance(modelo, index){
 	if(typeof index !== 'undefined')
 		return modelos[modelo][index];
 	return modelos[modelo];
+}
+function getRodaNome(index){
+	var nomesRodas = [
+		'PDW Roti Prata Diamantado',
+		'PDW Mercedes Benz AMG Grafite Diamantado',
+		'PDW Mercedes Benz C63 Grafite Diamantado',
+		'PDW Citroen DS5 Prata Diamantado',
+		'PDW BMW M4 Grafite Diamantado',
+		'PDW Eclipse Preto Diamantado',
+		'PDW Range Rover AUTOBIOGRAPHIC Grafite Diamantado',
+		'PDW BB Grafite Diamantado',
+		'PDW C-SPEC U4B Preto',
+		'PDW Eclipse Grafite Fosco',
+		'PDW Eclipse Bronze Fosco',
+		'PDW Hilux 2015 HS Super Prata',
+		'PDW Pajero 2015 HS Super Prata',
+		'PDW RJR Prata Diamantado',
+		'PDW RJR Grafite Fosco',
+		'PDW Chevrolet Blazer Grafite Diamantado'
+	]
+	return nomesRodas[index];
 }
 function resizeRodas(px){
 	$('.roda-show').css({

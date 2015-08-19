@@ -75,11 +75,18 @@ body{
 #showroom img{
 	height: 100%;
 }
+#showroom #roda-atual{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
 #rodas{
 	width: 100%;
 	height: 20%;
 	text-align: center;
-	overflow-y: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
 }
 .roda{
 	position: relative;
